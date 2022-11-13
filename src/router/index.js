@@ -5,18 +5,23 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    redirect: '/index',
+    path: "/",
+    redirect: "/login",
+  },
+  {
+    path: "/404",
+    name: "404",
+    component: () => import("../views/error/404.vue"),
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: () => import("../views/login/login.vue"),
   },
   {
     path: "/index",
     name: "Index",
-    component: () => import("../views/index/Index.vue"),
-  },
-  {
-    path: "/home",
-    name: "Home",
-    component: () => import("../views/home/Home.vue"),
+    component: () => import("../views/index/index.vue"),
   },
 ];
 
@@ -25,9 +30,16 @@ const router = new VueRouter({
 });
 
 // router.beforeEach((to, from, next) => {
-//   console.log(to);
-//   console.log(from);
-//   next();
+//   document.title = to.meta.title; //动态改变浏览器标题
+//   if (to.path === "/login") {
+//     next();
+//   } else {
+//     if (cookies.get("token")) {
+//       next();
+//     } else {
+//       next("/login");
+//     }
+//   }
 // });
 
 export default router;
