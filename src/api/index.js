@@ -1,7 +1,7 @@
 import request from "./request";
 
 export const HomeApi = () => request.get("/index/index");
-export const GoodshApi = (params) => request.get("/goods/list", { params });
+export const GoodshApi = (params) => request.get("/goods/list", params);
 export const LoginApi = (params) => request.post("/auth/loginByWeb", params);
 
 /* 
