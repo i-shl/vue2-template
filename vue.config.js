@@ -1,7 +1,8 @@
-const { defineConfig } = require('@vue/cli-service')
+const { defineConfig } = require("@vue/cli-service");
 module.exports = defineConfig({
   transpileDependencies: true,
   lintOnSave: false,
+  publicPath: "./", // 文件加载设置为相对路径
   // devServer: {
   //   host: "localhost",
   //   port: 9020, // 指定端口
@@ -19,4 +20,4 @@ module.exports = defineConfig({
   //     },
   //   },
   // },
-})
+});
