@@ -3,7 +3,7 @@ module.exports = defineConfig({
   transpileDependencies: true,
   lintOnSave: false,
   publicPath: "./", // 文件加载设置为相对路径
-  devServer: {
+  // devServer: {
   //   https:true
   //   host: "localhost",
   //   port: 9020, // 指定端口
